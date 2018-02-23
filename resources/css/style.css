@@ -1,6 +1,7 @@
 body {
 font-size: 18px;
 color: white;
+display:block;
 }
 header {
   width: 100%;
@@ -43,16 +44,17 @@ header {
   min-width: 20rem;
   height: auto;
   margin-top: 9rem;
-  margin-left: 9rem;
+  position: relative;
   font-weight: bold;
   font-family: Helvetica;
   text-align:left;
+
 }
 #new {
+  padding-top: 2em;
+  padding-left: 3em;
+  padding-bottom: 0.25em;
   font-size: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 0.25rem;
-  margin-left: 3rem;
 }
 #bike {
   font-size: 2rem;
@@ -60,11 +62,8 @@ header {
   margin-bottom: 2rem;
   margin-right: 3rem;
 }
-.list {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+nav {
+  align-content: center;
   background-color: firebrick;
   margin-top: 0px;
   width: 100%;
@@ -73,12 +72,27 @@ header {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+li {
+  width: 100%;
+  display: inline;
+  list-style: none;
+}
+
+ul  {
+  display: flex;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  justify-content: space-between;
+
+}
 .middle {
   display:flex;
   height:auto;
-
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
   }
   .box {
     width: 30%;
@@ -106,6 +120,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 3rem;
+  overflow: hidden;
 }
 .tag {
   width:35%;
@@ -126,6 +141,26 @@ footer {
   padding: 4em;
 }
 
-@ media only screen and (max-width: 1024px)
+@media only screen and (max-width: 1024px) {
   .box {
-  width: 47%;}
+    width: 47%;
+    display:inline-table;
+    overflow: hidden;
+    margin-left: 0%;
+    }
+footer {
+  padding-left: 0%;
+}
+nav ul {
+  display: none;
+}
+.bottom {
+  margin-left: 0%;
+}
+}
+@media only screen and (min-width: 1024px) {
+  .sport {
+    margin-left: 9rem;
+  }
+
+}
