@@ -148,6 +148,9 @@ footer {
     overflow: hidden;
     margin-left: 0%;
     }
+body {
+  font-size: 16px;
+}
 footer {
   padding-left: 0%;
 }
@@ -157,10 +160,35 @@ nav ul {
 .bottom {
   margin-left: 0%;
 }
+.appear {
+  display: block;
+  text-align: center;
+}
 }
 @media only screen and (min-width: 1024px) {
   .sport {
     margin-left: 9rem;
   }
+  .appear {
+    display: none;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .title {
+    display: none;
+  }
+  .logo {
+    justify-content: center;
+  }
+  footer {
+    text-align: center;
+  }
+  .box {
+    width: 90%;
+    display:inline-table;
+    overflow: hidden;
+    margin-left: 0%;
+    }
+    
 
 }
